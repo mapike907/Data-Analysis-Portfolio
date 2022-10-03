@@ -1,0 +1,16 @@
+outlook,temperature,Windy,Visability,ski
+sunny,10,TRUE,Poor,no
+sunny,15,TRUE,Good,yes
+overcast,20,FALSE,Good,yes
+snow,18,FALSE,Good,Yes
+snow,20,TRUE,Poor,no
+overcast,25,TRUE,Good,yes
+rainy,37,FALSE,Good,no
+rainy,35,TRUE,Poor,no
+overcast,35,FALSE,Good,yes
+snow,25,TRUE,Good,yes
+snow,5,TRUE,Poor,no
+overcast,8,TRUE,Poor,no
+overcast,15,FALSE,Good,yes
+sunny,25,FALSE,Good,yes
+sunny,8,TRUE,Good,yes
