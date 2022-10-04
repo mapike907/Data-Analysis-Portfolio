@@ -1,2 +1,2 @@
-outlook,temperature,humidity,visability,ski
-sunny,15,42,Good,yes
+outlook,temperature,wind,visability,ski
+sunny,15,5,Good,yes
