@@ -5,7 +5,7 @@
  Outputs: Probability of us skiing today. 
  
  
-![](images/skiing1.png)
+![Skiing App](/path/to/image.png)
 
 
  
