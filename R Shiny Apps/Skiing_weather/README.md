@@ -5,7 +5,7 @@
  Outputs: Probability of us skiing today. 
  
  
-![](images/yourimagename.png)
+![](images/skiing1.png)
 
 
  
