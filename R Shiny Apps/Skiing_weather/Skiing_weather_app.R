@@ -53,14 +53,14 @@ ui <- fluidPage(theme = shinytheme("united"),
                   selectInput("outlook", label = "Outlook:", 
                               choices = list("sunny", "overcast","rainy", "snow"), 
                               selected = "Sunny"),
-                  sliderInput("temperature", label = "Temperature:",
+                  sliderInput("temperature", label = "Temperature (F):",
                               min = 10, max = 37,
                               value = 15),
-                  sliderInput("humidity", label = "Humidity:",
-                              min = 30, max = 45,
-                              value = 40),
-                  selectInput("Visability", label = "Visability:", 
-                              choices = list("Good", "Poor"), 
+                  sliderInput("wind", label = "Wind (mph):",
+                              min = 3, max = 35,
+                              value = 10),
+                  selectInput("visability", label = "Visability:", 
+                              choices = list("Good" = "TRUE", "Poor" = "FALSE"), 
                               selected = "Good"),
                   
                   actionButton("submitbutton", "Submit", class = "btn btn-primary")
@@ -83,22 +83,18 @@ server <- function(input, output, session) {
   # Input Data
   datasetInput <- reactive({  
     
-    # outlook,temperature,windy,humidity,visability,ski
+    # outlook,temperature,windy,wind,visability,ski
     df <- data.frame(
       Name = c("outlook",
                "temperature",
-               "humidity",
+               "wind",
                "visability"),
       Value = as.character(c(input$outlook,
                              input$temperature,
-                             input$humidity,
+                             input$wind,
                              input$visability)),
       stringsAsFactors = FALSE)
     
-    ski <- "ski"
-    df <- rbind(df, ski)
-    input <- transpose(df)
-    write.table(input,"input.csv", sep=",", quote = FALSE, row.names = FALSE, col.names = FALSE)
     
     test <-  read.csv(file='input.csv')
     
