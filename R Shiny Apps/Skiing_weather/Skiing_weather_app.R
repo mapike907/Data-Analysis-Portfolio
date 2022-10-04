@@ -51,7 +51,7 @@ ui <- fluidPage(theme = shinytheme("united"),
                   HTML("<h3>Input parameters</h3>"),
                   
                   selectInput("outlook", label = "Outlook:", 
-                              choices = list("Sunny" = "sunny", "Overcast" = "overcast", "Rainy" = "rainy", "Snow" = "snow"), 
+                              choices = list("sunny", "overcast","rainy", "snow"), 
                               selected = "Sunny"),
                   sliderInput("temperature", label = "Temperature:",
                               min = 10, max = 37,
@@ -60,8 +60,8 @@ ui <- fluidPage(theme = shinytheme("united"),
                               min = 30, max = 45,
                               value = 40),
                   selectInput("Visability", label = "Visability:", 
-                              choices = list("Good" = "TRUE", "Poor" = "FALSE"), 
-                              selected = "TRUE"),
+                              choices = list("Good", "Poor"), 
+                              selected = "Good"),
                   
                   actionButton("submitbutton", "Submit", class = "btn btn-primary")
                 ),
@@ -94,8 +94,6 @@ server <- function(input, output, session) {
                              input$humidity,
                              input$visability)),
       stringsAsFactors = FALSE)
-    
-  
     
     ski <- "ski"
     df <- rbind(df, ski)
