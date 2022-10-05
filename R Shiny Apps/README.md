@@ -1,5 +1,5 @@
-# Data-Analysis-Portfolio
- Portfolio of Fun Projects
+# R Shiny Apps
+ Portfolio of Fun App Projects
 
 
 | Projects  | Description  | Output |
