@@ -15,7 +15,8 @@ SAS program produces sas file 'weather' for use in Tableau.
 
 **DISCUSSION:** Based on histoical data, Anchorage oftens sees it's first snowfall during the second or third week of October. La Niña and El Niño's also impact snowfalls. In September 2022, Climate.gov stated the odds of a La Niña this winter are more than 90 percent [1]. When there is an La Niña, that typically means above-average snowfall. 
 
-![](https://github.com/mapike907/Images/blob/main/Snowfall2.PNG =250x250)
+<img src="[https://camo.githubusercontent.com/...](https://github.com/mapike907/Images/blob/main/Snowfall2.PNG)" data-canonical-src="[https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png](https://github.com/mapike907/Images/blob/main/Snowfall2.PNG)" width="200" height="400" />
+
 
 
 **REFERENCES:**
