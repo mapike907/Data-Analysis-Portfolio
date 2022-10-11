@@ -22,7 +22,7 @@ La Niña and El Niño's also impact snowfalls. In September 2022, Climate.gov st
 
 Putting the months & days into order, we can see that we have the following:
 
-<img src="https://github.com/mapike907/Images/blob/main/Snow1.PNG" width="700" height="400" />
+<img src="https://github.com/mapike907/Images/blob/main/snow1.PNG" width="500" height="400" />
 
 
 
