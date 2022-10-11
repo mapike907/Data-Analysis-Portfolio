@@ -2,7 +2,7 @@
  Portfolio of Fun Projects
 
 
-| Projects  | Program  | Description |Output |
+| Projects  | Program(s)  | Description |Output |
 | :------------ |:---------------| :---------------| :---------------|
-| Alaska-Climate-Analysis    | R  | Data Cleaning & ggplot | Snowfall in Anchorage - What months & weeks has the first snow occurred in autumn between 2011 and 2021? |
+| Alaska-Climate-Analysis    | SAS, Tableau  | Data Cleaning | Snowfall in Anchorage - What months & weeks has the first snow occurred in autumn between 2011 and 2021? |
 |  |        |   |
