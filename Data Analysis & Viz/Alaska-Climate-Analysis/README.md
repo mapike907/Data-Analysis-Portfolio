@@ -7,3 +7,5 @@ Variables pulled for analysis:  maximum temperature, mean temperature, minimum t
 link: https://akclimate.org/data/data-portal/
 
 datafile in GitHub folder: weather_anc_2011_2021.csv
+
+SAS program produces sas file 'weather' for use in Tableau. 
