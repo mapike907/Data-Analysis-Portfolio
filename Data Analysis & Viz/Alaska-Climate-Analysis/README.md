@@ -6,7 +6,7 @@ https://anchoragenordicski.com/events/anchorage-nordic-snow-classic/
 **Question:** Based upon the past decade of precipitation data, what are the best days or weeks to choose for entering this raffle?
 
 **Methods & Datasets:**
-Precipatation and temperature from 8/1/2011 to 12/31/2021, Anchorage, AK. Dataset downloaded from from Alaska Climate Research Center (ACRC) Data Portal on 10/11/2022. 
+Precipitation and temperature from 8/1/2011 to 12/31/2021, Anchorage, AK. Dataset downloaded from from Alaska Climate Research Center (ACRC) Data Portal on 10/11/2022. 
 Variables pulled for analysis: maximum temperature, mean temperature, minimum temperature, snowfall, snow depth, precipitation.
 link: https://akclimate.org/data/data-portal/
 
@@ -20,7 +20,7 @@ Between October 2011 and October 2021, eight out of eleven years saw a first sno
 
 La Niña and El Niño's also impact snowfalls. In September 2022, Climate.gov stated the odds of a La Niña this winter are more than 90 percent [1]. When there is an La Niña, that typically means above-average snowfall. Other La Niña years in this timeframe include 2010-2011 and 2016-2017. 
 
-Putting the months & days into order, we can see that we have the following:
+Putting the months & days into order gives us a different view without evaluating year:
 
 <img src="https://github.com/mapike907/Images/blob/main/snow1.PNG" width="500" height="400" />
 
