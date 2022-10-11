@@ -13,3 +13,10 @@ link: https://akclimate.org/data/data-portal/
 Datafile in GitHub folder: weather_anc_2011_2021.csv
 SAS program produces sas file 'weather' for use in Tableau. 
 
+DISCUSSION: Based on histoical data, Anchorage oftens sees it's first snowfall during the second or third week of October. La Niña and El Niño's also impact snowfalls. In September 2022, Climate.gov stated the odds of a La Niña this winter are more than 90 percent [1]. When there is an La Niña, that typically means above-average snowfall. 
+
+
+
+
+REFERENCES: 
+[1]NOAA Climate.gov. "September 2022 La Niña update: it's Q & A time." 8 September 2022. accessed on 11 Oct 2022 at: https://www.climate.gov/news-features/blogs/september-2022-la-ni%C3%B1a-update-it%E2%80%99s-q-time
