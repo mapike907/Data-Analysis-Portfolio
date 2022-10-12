@@ -1,5 +1,5 @@
 # Data-Analysis-Portfolio
-Portfolio of Fun Projects coding in SAS, R and Python.
+Portfolio of fun projects coding in SAS, R and Python.
 
 
 
