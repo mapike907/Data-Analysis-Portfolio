@@ -1,8 +1,8 @@
-# Data Analysis and ggplot
+# Data Analysis and Visualizations
  Portfolio of Fun Projects
 
 
 | Projects  | Program(s)  | Description |Output |
 | :------------ |:---------------| :---------------| :---------------|
-| Alaska-Climate-Analysis    | SAS, Tableau  | Data Cleaning | Snowfall in Anchorage - What months & weeks has the first snow occurred in autumn between 2011 and 2021? |
+| Alaska Snowfall Raffle  | SAS, Tableau  | Data Cleaning,  Bar Charts | Data analysis to guess 2022 first significant snowfall date to win NSAA Raffle |
 |  |        |   |
