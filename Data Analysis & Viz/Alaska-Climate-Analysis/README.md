@@ -22,7 +22,7 @@ Putting the months & days into order gives us a different view without evaluatin
 
 <img src="https://github.com/mapike907/Images/blob/main/snow1.PNG" width="500" height="400" />
 
-Based on this limited set of data, if you were making a prediction for this raffle, you would probably want to choose somewhere between late October and into the first week of November. Given that today is October 11, and, as of today, we have a forecast to October 18th that has no snow, with highs and lows above freezing, one would probably want to guess a later datethan October 20th. Additional analysis could evaulate more than 10 years of data to get more datapoints to make a more educated or informed guess.
+Based on this limited set of data, if you were making a prediction for this raffle, you would probably want to choose somewhere between late October and into the first week of November. Given that today is October 11, and, as of today, we have a forecast to October 18th that has no snow, with highs and lows above freezing, one would probably want to guess a later date than October 20th. Additional analysis could evaulate more than 10 years of data to get more datapoints to make a more educated or informed guess.
 
 Data analyst will update this post with the snowfall date, once it occurs.
 
