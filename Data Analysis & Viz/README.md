@@ -1,4 +1,4 @@
-# Data Analysis and ggplot
+# Data Analysis and Visualizations
  Portfolio of Fun Projects
 
 
