@@ -18,13 +18,11 @@ Between October 2011 and October 2021, eight out of eleven years saw a first sno
 
 <img src="https://github.com/mapike907/Images/blob/main/Snowfall2.PNG" width="800" height="400" />
 
-La Niña and El Niño's also impact snowfalls. In September 2022, Climate.gov stated the odds of a La Niña this winter are more than 90 percent [1]. When there is an La Niña, that typically means above-average snowfall. Other La Niña years in this timeframe include 2010-2011 and 2016-2017. 
-
 Putting the months & days into order gives us a different view without evaluating year:
 
 <img src="https://github.com/mapike907/Images/blob/main/snow1.PNG" width="500" height="400" />
 
+Based on this limited set of data, if you were making a prediction for this raffle, you would probably want to choose somewhere between late October and into the first week of November. Given that today is October 11, and, as of today, we have a forecast to October 18th that has no snow, with highs and lows above freezing, one would probably want to guess a later datethan October 20th. Additional analysis could evaulate more than 10 years of data to get more datapoints to make a more educated or informed guess.
 
+Data analyst will update this post with the snowfall date, once it occurs.
 
-**REFERENCES:**
-[1] NOAA Climate.gov. "September 2022 La Niña update: it's Q & A time." 8 September 2022. accessed on 11 Oct 2022 at: https://www.climate.gov/news-features/blogs/september-2022-la-ni%C3%B1a-update-it%E2%80%99s-q-time
