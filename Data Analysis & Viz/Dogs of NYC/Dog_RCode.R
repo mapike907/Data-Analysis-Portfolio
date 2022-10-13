@@ -17,6 +17,7 @@ library(dplyr)
 library(readr)
 library(lubridate)
 library(tidyverse)
+library(arsenal)
 library(ggplot2)
 
 # import the dataset
@@ -72,10 +73,30 @@ mean(df4$ageyears)
 
 # Q: What are the 10 most popular names for dog licenses in NYC between March 2020 
 # and March 2021?
+df_names <- df4 %>% group_by(AnimalName) %>% dplyr::summarise(count = n())
+
+# remove "unknown' and 'name not provided' from AnimalName. We only want those
+# with names for this analysis. 
+df_names %>% 
+  group_by(AnimalName) %>% count()
+
+df_names <- df_names %>% dplyr::filter(AnimalName !='UNKNOWN' & AnimalName !='NAME NOT PROVIDED')
+
+# order in descending counts
+df_names %>%
+  arrange(desc(count)) %>%
+  head(10) %>%
+  ggplot(aes(x=reorder(AnimalName,desc(count)), y=count)) + geom_col() + labs(x = 'Name')
 
 
+barplot(counts, main="Animal Names",
+        xlab="Names")
 
 
+df_names_sort3 <- df_names %>%                 # Order table with dplyr
+  as.data.frame() %>% 
+  arrange(desc(AnimalName))
+df_names_sort3                               # Print ordered table as data frame
 
 
 names(which.max(table(df2$AnimalName)))
