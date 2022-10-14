@@ -82,37 +82,61 @@ df_names %>%
 
 df_names <- df_names %>% dplyr::filter(AnimalName !='UNKNOWN' & AnimalName !='NAME NOT PROVIDED')
 
-# order in descending counts
+# order in descending counts and make a bar chart
 df_names %>%
   arrange(desc(count)) %>%
   head(10) %>%
-  ggplot(aes(x=reorder(AnimalName,desc(count)), y=count)) + geom_col() + labs(x = 'Name')
+  ggplot(aes(x=reorder(AnimalName,desc(count)), y=count)) + geom_col() + 
+    labs(x = 'Dog Name', y = 'Number of Dogs', 
+    title = ' Top 10 Dog Names Registered in NYC, March 2020 to March 2021')
 
 
-barplot(counts, main="Animal Names",
-        xlab="Names")
+# Q: What are the 10 most popular breeds for dog licenses in NYC between March 2020 
+# and March 2021?
+breeds <- df4 %>% group_by(BreedName) %>% dplyr::summarise(count = n())
+
+# remove "unknown' and 'name not provided' from AnimalName. We only want those
+# with names for this analysis. 
+breeds %>% 
+  group_by(BreedName) %>% count()
+
+breeds <- breeds %>% dplyr::filter(BreedName !='Unknown')
+
+# order in descending counts and make a bar chart
+breeds %>%
+  arrange(desc(count)) %>%
+  head(10) %>%
+  ggplot(aes(y=reorder(BreedName,desc(count)), x=count)) + geom_col() + 
+  labs(x = 'Number of Dogs', y = 'Breed', 
+       title = ' Top 10 Dog Breeds Registered in NYC, March 2020 to March 2021')
 
 
-df_names_sort3 <- df_names %>%                 # Order table with dplyr
-  as.data.frame() %>% 
-  arrange(desc(AnimalName))
-df_names_sort3                               # Print ordered table as data frame
+#Q: How many dogs were name "CORONA" during the first year of the pandemic?
+corona <- df4 
+
+corona <- corona %>% dplyr::filter(AnimalName =='CORONA')
+
+# There were 16 dogs named "CORONA' during this timeframe.
+# All of these dogs had birth years on or prior to 2018; therefore, no new
+# dogs with the name CORONA were made in this timeframe. 
+
+rona <- df4
+rona <- rona %>% dplyr::filter(AnimalName =='RONA')
+
+# There were 11 dogs named "RONA" during this timeframe. 
+# One of 11 was birthed in 2020 and was named "RONA". It was a Chihuahua. 
+
+quarantine <- df4
+quarantine <- quarantine %>% dplyr::filter(AnimalName =='QUARANTINE')
+
+# No dogs named "QUARANTINE'
 
 
-names(which.max(table(df2$AnimalName)))
+#Q: For the top 5 names what were their breeds?
+name_breed <- df4
+name_breed %>% 
+  group_by(AnimalName,BreedName) %>% count()
 
-# look at summary, utilizing package gmodels
-counts <- table(df2$BreedName)
-barplot(counts, main="BreedName",
-        xlab="Breeds")
-
-
-summary(dogs.ex, title = "Summary of ")
-df %>%
-  mutate(x = c("", "NewVariable"[(date >= "2020-03-01" & 
-                                    as.character(infection) == "infectionvariableyouwant"] )
-                                 
-                                 
-                                 
-                                 
-dat$rate <- ((viz$count.y/viz$count.x)*100)
+name_breed <- name_breed %>% dplyr::filter(AnimalName !='UNKNOWN' & 
+                                             AnimalName !='NAME NOT PROVIDED' &
+                                             BreedName != 'Unknown')
