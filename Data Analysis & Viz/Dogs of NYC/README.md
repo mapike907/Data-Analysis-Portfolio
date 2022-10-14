@@ -6,7 +6,7 @@
 
 **Questions:** What were the most popular names and breeds of dogs registered during the first year of the pandemic, March 2020 to March 2021? Did any have the name "CORONA", "RONA", or other pandemic inspired names?
 
-**Methods & Datasets:** Data pulled from nyc.gov website. Dates of analysis included license issued between March 01, 2020 to March 01, 2021. Dogs with unknown names or unknown breed were excluded. Dogs over the age of 22 (N=1037) were excluded, due to possible inaccuracy with data collection. The .csv file is located in this folder, titled "NYC_Dog_Licensing_Dataset.csv". 
+**Methods & Datasets:** Data pulled from nyc.gov website. Dates of analysis included license issued between March 01, 2020 to March 01, 2021. Dogs with unknown names or unknown breed were excluded. Most dogs live 10-13 years, with some smaller breeds living longer. Therefore, dogs over the age of 22 (N=1037) were excluded, due to possible inaccuracy with data collection. The .csv file is located in this folder, titled "NYC_Dog_Licensing_Dataset.csv". 
 
 **DISCUSSION:** The dataset evaluated 507,731 dog licenses that were issued between March 1, 2020 to March 1, 2021. The mean age was 7.8 years. 
 
