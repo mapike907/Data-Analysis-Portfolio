@@ -12,7 +12,7 @@
 
 <img src="https://github.com/mapike907/Images/blob/main/Rplot.jpeg"/>
 
-Between March 2020 and March 2021, there were 16 dogs registered as CORONA; however, all of these dogs had birth years on or prior to 2018. Without license number data, changes in names from one year to the next could not be evaluated, and it is highly unlikely that owners would change a dogs name unless it switched to new owners. There were 11 dogs registered as RONA, with one birthed within the pandemic timeframe. It was a Chihuahua. New Yorkers appeared to not be inspired in naming their dogs after the pandemic. 
+Between March 2020 and March 2021, there were 16 dogs registered as CORONA; however, all of these dogs had birth years on or prior to 2018. Without license number data, changes in names from one year to the next could not be evaluated, and it is highly unlikely that owners would change a dogs name unless it switched to new owners. There were 11 dogs registered as RONA, with one birthed within the pandemic timeframe. New Yorkers appeared to not be inspired in naming their dogs after the pandemic. 
 
 There were 1565 different breeds within the dataset. Yorkshire Terrier (N=30,200), Shih Tzu (N=27,593), Chihuahua (N=21,020), Laborador Retriever (N=15,686) and Maltese (N=15,656) were the top five breeds registered during this timeframe. Four of these five dogs are small breeds, weighing <10 lbs, which may be due to small living spaces (average unit is 500-866 sq ft).  
 
