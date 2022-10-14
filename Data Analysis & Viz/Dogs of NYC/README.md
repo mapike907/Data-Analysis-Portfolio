@@ -8,7 +8,7 @@
 
 **Methods & Datasets:** Data pulled from nyc.gov website. Dates of analysis included license issued between March 01, 2020 to March 01, 2021. Dogs with unknown names or unknown breed were excluded. Dogs over the age of 22 (N=1037) were excluded, due to possible inacuracy with data collection. The .csv file is located in this folder, titled "NYC_Dog_Licensing_Dataset.csv". 
 
-**DISCUSSION:** The dataset evaluated 507,731 dog licenses that were issued between March 1, 2020 to March 1, 2021. The mean age was 7.8 years. The 
+**DISCUSSION:** The dataset evaluated 507,731 dog licenses that were issued between March 1, 2020 to March 1, 2021. The mean age was 7.8 years. 
 
 <img src="https://github.com/mapike907/Images/blob/main/Rplot.jpeg"/>
 
