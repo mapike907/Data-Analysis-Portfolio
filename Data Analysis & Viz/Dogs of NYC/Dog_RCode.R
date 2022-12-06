@@ -92,7 +92,9 @@ df_names %>%
 
 
 # Q: What are the 10 most popular breeds for dog licenses in NYC between March 2020 
-# and March 2021?
+# and March 2021, by gender?
+
+
 breeds <- df4 %>% group_by(BreedName) %>% dplyr::summarise(count = n())
 
 # remove "unknown' and 'name not provided' from AnimalName. We only want those
