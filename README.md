@@ -7,3 +7,4 @@ Portfolio of fun projects coding in SAS, R and Python.
 | ------------- | ------------- | ------------- |
 | Data Analysis and Viz | SAS, R, Tableau  | Data cleaning and manipulation, Data Visuals using Tableau & R  |
 | R Shiny Apps | R | Shiny apps created while learning Shiny |
+|  | |  |
