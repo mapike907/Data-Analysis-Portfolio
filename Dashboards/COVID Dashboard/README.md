@@ -1,8 +1,10 @@
 # COVID-19 DASHBOARD
- Dashboard of COVID-19 Cases, Hospitalizations and Deaths 
+Dashboard of COVID-19 Cases, Hospitalizations and Deaths. 
+
+This was part of a project to create data visualiazation with my team at Colorado DPHE. This code has been condensed and only uses aggregate data that is provided by state and/or federal/national data that was used to evaluate COVID-19 trends. 
+Other co-authors of this project include: Alexis Bell and Ivy Oyegun. 
 
 This code pulls data from external sources and the output file will feed into Tableau for data vizualization. 
-
 
 **Data Sources:**
 
