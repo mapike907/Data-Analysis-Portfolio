@@ -4,6 +4,12 @@
 /***********************************************************************/
 /******** LAST UPDATE 01/04/2023 ***************************************/
 
+/*This was part of a project to create data visualiazation with my team 
+at Colorado DPHE. This code has been condensed and only uses aggregate 
+data that is provided by state and/or federal/national data that was 
+used to evaluate COVID-19 trends. Other co-authors of this project & code 
+include: Alexis Bell and Ivy Oyegun. */
+
 /***********************************************************************/
 /********************* STEP 1: DATASETS ********************************/
 /***********************************************************************/
