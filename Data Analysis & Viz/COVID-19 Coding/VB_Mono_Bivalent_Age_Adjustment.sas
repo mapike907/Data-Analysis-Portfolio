@@ -1,14 +1,14 @@
 /*************************************************************************************************/
-/* MN, CO, TN VB Variant Analysis 															     */
-/* SAS CODE written 8 FEB 2023        															 */
-/* Creates categories based upon vaccination status 											 */
+/* Variant Analysis 										 */
+/* SAS CODE written 8 FEB 2023        								 */
+/* Creates categories based upon vaccination status 						 */
 /* Output table of eventids, vb_status, dob, firstname, lastname for matching to sequencing data */
 /*************************************************************************************************/
 
-libname cedrs 	odbc dsn='CEDRS_3_read' 	schema=CEDRS 	READ_LOCK_TYPE=NOLOCK; /*66 - CEDRS */;
-libname covid19  odbc dsn='COVID19' 		schema=ciis 	READ_LOCK_TYPE=NOLOCK; /* 144 - CIIS */;
-libname covid	 odbc dsn='COVID19' 	    schema=dbo		READ_LOCK_TYPE=NOLOCK; /* 144 - DBO */;
-libname covcase	 odbc dsn='COVID19' 	    schema=cases	READ_LOCK_TYPE=NOLOCK; /* 144 - DBO */;
+libname cedrs 	odbc dsn='CEDRS_III_read' schema=CEDRS 		READ_LOCK_TYPE=NOLOCK; 
+libname covid19  odbc dsn='COVID19' 	  schema=ciis 		READ_LOCK_TYPE=NOLOCK; 
+libname covid	 odbc dsn='COVID19' 	    schema=dbo		READ_LOCK_TYPE=NOLOCK;
+libname covcase	 odbc dsn='COVID19' 	    schema=cases	READ_LOCK_TYPE=NOLOCK; 
 libname archive 'O:\Programs\Other Pathogens or Responses\2019-nCoV\Vaccine Breakthrough\07_Data\archive';
 libname archive2 'O:\Programs\Other Pathogens or Responses\2019-nCoV\Vaccine Breakthrough\07_Data\archive2';
 
@@ -260,16 +260,16 @@ PROC SQL;
    SELECT t1.profileid, 
           t1.eventid, 
           t1.gender, 
-		  t1.age_at_reported,
-		  t1.partialonly,
+	  t1.age_at_reported,
+	  t1.partialonly,
           t1.reinfection, 
           t1.covtestdt, 
           t1.hospitalized_cophs,
-		  t1.deathdueto_vs_u071, 
+	  t1.deathdueto_vs_u071, 
           t1.cophs_admissiondate, 
           t1.hospitalized, 
           t1.casestatus,
-		  t1.breakthrough,
+	  t1.breakthrough,
           t1.vax_date_1, 
           t1.vax_date_2, 
           t1.vax_date_3, 
@@ -294,7 +294,7 @@ PROC SQL;
           t1.CVX_11, 
           t1.covtestdt, 
           t1.fully_vax_dt,  
-		  t1.first_vax_dt,  
+	  t1.first_vax_dt,  
           t1.first_booster_dt, 
           t1.second_booster_dt, 
           t1.third_booster_dt, 
