@@ -1,47 +1,40 @@
 
-/*****************************************************************************************************/
-/** 	CDC Vaccine Breakthrough Surveillance, Sent Monthly to CDC, Aggregate Data Submission		**/
-/**															  				   						**/
-/** 	Vaccine Breakthrough: Colorado VB data, Unvax & Partial, Cases & Deaths						**/
-/**		This is part 1 of 2. Unvax and Partial vax cases and deaths									**/
-/**																									**/															   
-/** 																								**/
-/**		Written by: M. Pike, May 23, 2022															**/
-/**		Updated 6/28/22 to include first and second booster dose data								**/
-/**		Updated 8/31/22 to remove individuals under 6 mo of age										**/
-/**		Updated 10/19/22 to update CDC new deliverable format										**/
-/*****************************************************************************************************/
+/*************************************************/
+/** 	 CDC Aggregate Data Submission		**/
+/**			   			**/												  				   																										**/
+/**	Written by: M. Pike, May 23, 2022 	**/	
+/**						**/
+/*************************************************/
 
-libname newcedrs odbc dsn='CEDRS_3_read' 	schema=CEDRS 	READ_LOCK_TYPE=NOLOCK; /*66 - CEDRS */;
-libname covidvax odbc dsn='covid_vaccine' 	schema=tab 		READ_LOCK_TYPE=NOLOCK; /* CDPHESQD03 */;
-libname covcase	 odbc dsn='COVID19' 	    schema=cases	READ_LOCK_TYPE=NOLOCK; /* 144 - DBO */;
-libname covid	 odbc dsn='COVID19' 	    schema=dbo		READ_LOCK_TYPE=NOLOCK; /* 144 - DBO */;
-libname covid19	 odbc dsn='COVID19' 		schema=ciis 	READ_LOCK_TYPE=NOLOCK; /* 144 - CIIS */;
+libname newcedrs odbc dsn='CEDRS_3_read' 	schema=CEDRS 		READ_LOCK_TYPE=NOLOCK;
+libname covidvax odbc dsn='covid_vaccine' 	schema=tab 		READ_LOCK_TYPE=NOLOCK; 
+libname covcase	 odbc dsn='COVID19' 	    	schema=cases		READ_LOCK_TYPE=NOLOCK; 
+libname covid	 odbc dsn='COVID19' 	    	schema=dbo		READ_LOCK_TYPE=NOLOCK; 
+libname covid19	 odbc dsn='COVID19' 		schema=ciis 		READ_LOCK_TYPE=NOLOCK;
 libname archive 'O:\Programs\Other Pathogens or Responses\2019-nCoV\Vaccine Breakthrough\07_Data\archive';
 
 
-/* PART 1: Pull all cases from Cedrs_III_Wearhouse (cedrs_view) */;
+/* PART 1: Pull all cases */;
 
 PROC SQL;
    CREATE TABLE cases_Cedrs3WH AS 
    SELECT DISTINCT 	eventid, 
-       				profileid, 
-					age_at_reported,
-          			breakthrough,
-					breakthrough_booster, 
-					vaccine_received,
-          			partialonly, 
-          			outcome, 
-					cophs_admissiondate,
-					datevsdeceased,
-					deathdueto_vs_u071,
-          			deathdate, 
-          			earliest_collectiondate,
-					vax_booster,
-          			vax_utd
+       			profileid, 
+			age_at_reported,
+          		breakthrough,
+			breakthrough_booster, 
+			vaccine_received,
+          		partialonly, 
+          		outcome, 
+			cophs_admissiondate,
+			datevsdeceased,
+			deathdueto_vs_u071,
+          		deathdate, 
+          		earliest_collectiondate,
+			vax_booster,
+          		vax_utd
       FROM COVID.cedrs_view;
 QUIT;
-/* N = 1,736,501  */;
 
 
 DATA cedrs_cleaned;
@@ -78,7 +71,7 @@ DATA cedrs_cleaned;
 drop death_week case_week death_year case_year;
 
 RUN;
-/* N = 1,027,865 */;
+
 
 
 /* Pull out kids who are <6 mo old */;
@@ -87,14 +80,13 @@ DATA adults;
 
 	if age_at_reported = 0 then delete;
 RUN;
-/* N = 1,015,658 */;
 
 DATA kids_1;
 	set cedrs_cleaned;
 
 	if age_at_reported = 0 then output;
 RUN;
-/* N = 12,207 */;
+
 
 /* Pull Birthdates */;
 
@@ -115,7 +107,7 @@ PROC SQL;
 	left join WORK.QUERY_FOR_ZDSI_PROFILES q on p.ProfileID = q.ProfileID
 ;
 QUIT; 
-/* N = 12,207 */;
+
 
 DATA kids_cleaned_1;
 	set cases_kids_bday;
@@ -131,7 +123,7 @@ DATA kids_cleaned_1;
 	drop dob days;
 
 RUN;
-/* N = 6,280 */;
+
 
 
 /* How many children are in the dataset that were under 6-months of age that need to be removed per CDC concept notes? */;
@@ -154,7 +146,7 @@ PROC FREQ data=children; table under6mo / nocol nocum nopercent norow; RUN;
 PROC FREQ data=children; table breakthrough*under6mo / nocol nocum nopercent norow; RUN;
 PROC FREQ data=children; table partialonly*under6mo / nocol nocum nopercent norow; RUN;
 PROC FREQ data=children; table breakthrough*partialonly*under6mo / nocol nocum nopercent norow; RUN;
-/* Answer: 5,919 children are removed from this dataset for January 2023 due to age <180 days/6 months */;
+
 
 
 /* Put Adults and kids back together */;
@@ -292,7 +284,7 @@ create table final_counts as
 		,case when n is not null then n else 0 end as count
 	from combined_rows r
 	left join 
-		( 	select mmwr_case, age_group, deathdueto_vs_u071, sum(deathdueto_vs_u071) as n /* switch vax_with_booster w/any variable you want to count */
+		( select mmwr_case, age_group, deathdueto_vs_u071, sum(deathdueto_vs_u071) as n /* switch vax_with_booster w/any variable you want to count */
 			from partial_all b 
 			group by mmwr_case, age_group, deathdueto_vs_u071 
 		 ) b
@@ -428,7 +420,7 @@ create table final_counts as
 		,case when n is not null then n else 0 end as count
 	from combined_rows r
 	left join 
-		( 	select mmwr_case, age_group, deathdueto_vs_u071, sum(deathdueto_vs_u071) as n /* switch vax_with_booster w/any variable you want to count */
+		( select mmwr_case, age_group, deathdueto_vs_u071, sum(deathdueto_vs_u071) as n /* switch vax_with_booster w/any variable you want to count */
 			from unvax_all b 
 			group by mmwr_case, age_group, deathdueto_vs_u071 
 		 ) b
