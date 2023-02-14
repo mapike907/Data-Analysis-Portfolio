@@ -26,3 +26,10 @@ Based on this limited set of data, if you were making a prediction for this raff
 
 Data analyst will update this post with the snowfall date, once it occurs.
 
+UPDATE 10/27/2022: THERE IS A WINNER!
+
+<img src="https://github.com/mapike907/Images/blob/main/Capture.JPG?raw=true" width="475" height="700" />
+
+**WHAT WAS LEARNED:** 
+The first snow was recorded after October 20, as predicted above. Data analysis should have examined first snowfall by decade, providing more data. Overall, this was a fun project to learn more skills in R and develop data analytical skills. 
+
