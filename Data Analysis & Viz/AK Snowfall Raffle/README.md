@@ -31,5 +31,5 @@ UPDATE 10/27/2022: THERE IS A WINNER!
 <img src="https://github.com/mapike907/Images/blob/main/Capture.JPG?raw=true" width="375" height="650" />
 
 **WHAT WAS LEARNED:** 
-The first snow was recorded after October 20, as predicted above. Data analysis should have examined first snowfall by decade, providing more data. Overall, this was a fun project to learn more skills in R and develop data analytical skills. 
+The first snow was recorded after October 20, as predicted above. Data analysis should have examined first snowfall by decade, providing more data points and potentially providing a more informed model/prediction. Overall, this was a fun project to learn more skills in R and further develop analytical skills. 
 
