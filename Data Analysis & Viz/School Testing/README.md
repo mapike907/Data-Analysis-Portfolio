@@ -1,5 +1,5 @@
 # School COVID Testing: Molecular and Antigen
-# DRAFT Analysis: Not current and not for any offical use. Show casing data skills in Tableau
+# DRAFT Analysis: Not current and not for any offical use. This is to showcase Tableau skills.
 
 
 Pulled testing from ELR, created testing weeks to go into Tableau.
