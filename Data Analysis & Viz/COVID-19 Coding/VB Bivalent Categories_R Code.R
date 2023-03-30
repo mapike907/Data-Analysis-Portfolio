@@ -187,13 +187,13 @@ Dataset <- Dataset %>%
   mutate(breakthrough_booster = case_when(
     vax == 'unvax' ~ 'Unvaccinated',
     vax == 'partial' ~ 'Partially Vaccinated',
-    vax == 'primary_series'  ~ 'Vaccinated with primary series, no booster',
-    vax == 'monovalent' ~ 'Vaccinated with monovalent booster',
-    vax == 'bivalent' ~ 'Vaccinated with bivalent booster'
-  )) %>% 
-  filter(breakthrough_booster != 'Partially Vaccinated')   # exclude partially vaccinated
+    vax == 'primary_series'  ~ 'Vaccinated with primary series',
+    vax == 'monovalent' ~ 'Vaccinated with a booster',
+    vax == 'bivalent' ~ 'Vaccinated with a booster'
+  )) # %>% 
+  #filter(breakthrough_booster != 'Partially Vaccinated')   # exclude partially vaccinated
 
  
-write.csv(Dataset, "C:\\Users\\Mapike\\Documents\\Dataset.csv", row.names=TRUE)
+write.csv(Dataset, "C:\\Users\\Mapike\\Documents\\Dataset.csv", row.names=FALSE)
 
 # END OF CODE #
